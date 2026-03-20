@@ -28,7 +28,7 @@ If you are using a different version of Unreal Engine, you will need to recompil
 
 # Instructions
 
-1. [Download the PBCharacterMovement plugin](https://github.com/ProjectBorealis/PBCharacterMovement/archive/main.zip) and paste it into your project's `Plugins/` folder.
+1. [Download the PBCharacterMovement plugin](https://github.com/DESMOND37/PBCharacterMovement_4.27.2/archive/main.zip) and paste it into your project's `Plugins/` folder.
 2. Open your Unreal Engine project.
 3. Enable Experintal Enhanced Input Plugin Support
 4. Add Enhanced Input actions and mappings for forward, right, look up, turn, jump, and crouch. Setting these assets up properly is not covered here, but many tutorials for this exist online.
