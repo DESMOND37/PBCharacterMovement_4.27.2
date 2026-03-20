@@ -223,7 +223,7 @@ protected:
 private:
 	/** pawn mesh: 1st person view */
 	UPROPERTY(VisibleDefaultsOnly, Category = Mesh)
-	TObjectPtr<USkeletalMeshComponent> Mesh1P;
+	USkeletalMeshComponent* Mesh1P;
 
 	/** cached default eye height */
 	float DefaultBaseEyeHeight;
@@ -270,9 +270,11 @@ private:
 	UPROPERTY(EditDefaultsOnly, meta = (AllowPrivateAccess = "true"), Category = "PB Player|Damage")
 	float CapDamageMomentumZ = 0.f;
 
-	/** Pointer to player movement component */
+	/** Pointer to player movement component
+	 *  UE4 port: TObjectPtr<> replaced with raw pointer (TObjectPtr is UE5-only)
+	 */
 	UPROPERTY()
-	TObjectPtr<UPBPlayerMovement> MovementPtr;
+	UPBPlayerMovement* MovementPtr;
 
 	/** True if we're sprinting*/
 	UPROPERTY(Transient, Replicated)

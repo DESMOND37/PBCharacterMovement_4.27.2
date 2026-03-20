@@ -4,7 +4,8 @@
 
 #include "CoreMinimal.h"
 
-#include "Chaos/ChaosEngineInterface.h"
+// UE4 port: replaced "Chaos/ChaosEngineInterface.h" with UE4-compatible header for EPhysicalSurface
+#include "PhysicalMaterials/PhysicalMaterial.h"
 
 #include "PBMoveStepSound.generated.h"
 
@@ -52,27 +53,27 @@ private:
 
 	/** The list of sounds to randomly choose from when stepping left */
 	UPROPERTY(EditDefaultsOnly, Category = Sounds)
-	TArray<TObjectPtr<USoundCue>> StepLeftSounds;
+	TArray<USoundCue*> StepLeftSounds;
 
 	/** The list of sounds to randomly choose from when stepping right */
 	UPROPERTY(EditDefaultsOnly, Category = Sounds)
-	TArray<TObjectPtr<USoundCue>> StepRightSounds;
+	TArray<USoundCue*> StepRightSounds;
 
 	/** The list of sounds to randomly choose from when sprinting left */
 	UPROPERTY(EditDefaultsOnly, Category = Sounds)
-	TArray<TObjectPtr<USoundCue>> SprintLeftSounds;
+	TArray<USoundCue*> SprintLeftSounds;
 
 	/** The list of sounds to randomly choose from when sprinting right */
 	UPROPERTY(EditDefaultsOnly, Category = Sounds)
-	TArray<TObjectPtr<USoundCue>> SprintRightSounds;
+	TArray<USoundCue*> SprintRightSounds;
 
 	/** The list of sounds to randomly choose from when jumping */
 	UPROPERTY(EditDefaultsOnly, Category = Sounds)
-	TArray<TObjectPtr<USoundCue>> JumpSounds;
+	TArray<USoundCue*> JumpSounds;
 
 	/** The list of sounds to randomly choose from when landing */
 	UPROPERTY(EditDefaultsOnly, Category = Sounds)
-	TArray<TObjectPtr<USoundCue>> LandSounds;
+	TArray<USoundCue*> LandSounds;
 
 	UPROPERTY(EditDefaultsOnly, Category = Volume)
 	float WalkVolume = 0.2f;
